@@ -1,0 +1,67 @@
+
+
+
+
+
+#cartToggle { display: none; }
+
+
+.overlay {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 99;
+}
+#cartToggle:checked ~ .overlay {
+    opacity: 1; pointer-events: auto;
+}
+
+
+.cart-sidebar {
+    position: fixed; top: 0; right: 0;
+    width: 320px; height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    display: flex; flex-direction: column;
+    z-index: 100;
+}
+#cartToggle:checked ~ .cart-sidebar {
+    transform: translateX(0);
+}
+
+
+.cart-sidebar .header,
+.cart-sidebar .cart-footer {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+.cart-sidebar .cart-footer {
+    margin-top: auto;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+.cart-list {
+    list-style: none; margin: 0; padding: 0;
+    flex: 1; overflow-y: auto;
+}
+.cart-item {
+    display: flex; align-items: center;
+    padding: .5rem; border-bottom: 1px solid #f0f0f0;
+}
+.cart-item .thumb {
+    width: 48px; height: 48px;
+    object-fit: cover; margin-right: .5rem;
+}
+
+
+.ico-trolley { position: relative; cursor: pointer; }
+.ico-trolley .badge {
+    position: absolute; top: -6px; right: -6px;
+    background: red; color: #fff;
+    font-size: .75rem; padding: 2px 6px;
+    border-radius: 50%;
+}

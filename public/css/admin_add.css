@@ -1,0 +1,177 @@
+.sort-container{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sortSelect{
+    border-radius: 10px;
+    min-width: 200px;
+    padding: .5rem;
+    height: auto;
+    width : 100px;
+}
+
+.sortButton{
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+
+.option{
+    background-color: darkgrey;
+}
+
+.sortButton:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+}
+
+
+.add_product{
+    width: 98%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+
+.ADDButton{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    justify-self: center;
+    line-height: 1;
+    margin: 1rem;
+    outline: none;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.ADDButton:hover {
+    box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+
+
+
+.products_board{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 80%;
+    height: auto;
+}
+
+
+.product_item {
+    margin: 1rem;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid darkgrey;
+    overflow: hidden;
+}
+
+.product_item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product_item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.caption-container{
+    display: flex;
+    width: 100%;
+    height:auto;
+    justify-content: center;
+    align-items: center;
+    margin:5px;
+}
+
+.caption {
+    color: #333;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+}
+
+.edit-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:5px;
+}
+
+
+.button-edit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+    background-color: white;
+    color: red;
+}
+
+.button-edit:hover {
+    color: white;
+    border-color: black;
+}
+
+
+.button-delete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+    background-color: white;
+    color: red;
+}
+
+.button-delete:hover {
+    color: white;
+    border-color: black;
+}
+

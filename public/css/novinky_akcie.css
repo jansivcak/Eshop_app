@@ -1,0 +1,43 @@
+
+.button_novinky_akcia {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.button_novinky{
+    display: block;
+    font-size: 24px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+    padding: 10px;
+    letter-spacing: 2px;
+    transition: all 0.25s;
+}
+
+
+.button_novinky:hover {
+    letter-spacing: 15px;
+}
+
+
+.novinky {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 98%;
+    padding: 1rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

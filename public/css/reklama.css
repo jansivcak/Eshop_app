@@ -1,0 +1,32 @@
+
+.brands{
+    background: black;
+    flex-wrap: wrap;
+    width : 98%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+.brand1{
+    background: black;
+    height: 90px;
+    width : 100px;
+}
+
+.brand1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand2 img{
+    width: 155px;
+    height: 100%;
+    object-fit: cover;
+}

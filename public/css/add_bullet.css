@@ -1,0 +1,60 @@
+.bullet-input-container {
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#bulletList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.logo {
+    margin-bottom: 0px;
+}
+.bullet-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.bullet-item input {
+    flex: 1;
+    width: 500px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.bullet-item button.removeBullet {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.bullet-item button.removeBullet:hover {
+    background-color: #c0392b;
+}
+
+#addBulletBtn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#addBulletBtn:hover {
+    background-color: grey;
+}

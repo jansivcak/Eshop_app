@@ -1,0 +1,48 @@
+
+
+.input_price{
+    display: inline-block;
+    width: 150px;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+
+.filter_button{
+    display: flex;
+    margin: 5px;
+    align-self: center;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+    background-color: lightgrey;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    height: 36px;
+    line-height: 27px;
+    min-width: 54px;
+    padding: 0 16px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: pre;
+}
+
+
+.filter_button:hover {
+    border-color: #dadce0;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+    color: #202124;
+}
+
+.filter_button:focus {
+    border-color: #4285f4;
+    outline: none;
+}

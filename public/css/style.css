@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Štýl pre header */
+header {
+    background-color: #fff; /* Farba pozadia */
+    border-bottom: 1px solid #ccc; /* Jemná čiara dole */
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Kontajner pre obsah headeru */
+.header-container {
+    max-width: 100%;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+    height: 100%;
+    border: #333333;
+}
+/* Štýl pre navigáciu */
+.categories ul {
+    margin-left: 20px;
+    grid-column: 1;
+    list-style: none;
+    display: flex;
+}
+
+.button {
+    border: none;
+    height: 60px;
+    width: 90px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+/* LOGO (ak potrebuješ upraviť) */
+.header-logo {
+    grid-column: 2; /* stredný stĺpec v gride */
+    text-align: center;
+}
+
+/* HAMBURGER ŠTÝLY */
+.hamburger {
+    display: none; /* Na väčších obrazovkách je hamburger skrytý */
+    cursor: pointer;
+    grid-column: 1; /* napr. do tretieho stĺpca, ak chceš vpravo */
+    justify-self: start;
+    padding-left: 1rem;
+}
+
+
+
+/* Vizuál 3 čiarok */
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0; /* medzera medzi čiarami */
+    transition: 0.4s;
+}
+
+
+@media (min-width: 769px) {
+    .categories ul {
+        display: flex; /* napr. vodorovné menu */
+    }
+    .hamburger {
+        display: none; /* hamburger skryjeme na veľkých obrazovkách */
+    }
+}
+
+/* --- MENŠIE OBRAZOVKY --- */
+@media (max-width: 768px) {
+    /* Skryjeme menu v základnom stave */
+    .categories ul {
+        /* Vynútime, aby sa ignorovalo display: flex; z väčších obrazoviek */
+        display: block;
+        position: absolute;
+        top: 90px;           /* pod header (ak má 60px výšku) */
+        left: 0;
+        width: 200px;
+
+        /* Skryté "vyrolovanie" */
+        max-height: 0;       /* menu je zbalené */
+        overflow: hidden;    /* skryje vnútorný obsah */
+        transition: max-height 0.3s ease;
+
+        /* Bez pozadia a bez rámika, aby nebolo nič vidno */
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Keď je .categories aktívne, "vyrolujeme" menu */
+    .categories.active ul {
+        max-height: 300px;   /* otvorené menu */
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-radius: 10px; /* Zaoblenie rohov – môžeš upraviť hodnotu podľa potreby */
+    }
+
+
+    /* Položkám môžeš pridať spodnú hranicu, ak chceš */
+    .categories.active ul li {
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Hamburger zobrazíme na menších obrazovkách */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+/* Štýl pre logo */
+.header-logo a {
+    text-decoration: none;
+    grid-column: 2;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.icons {
+    grid-column: 3;
+    height: 100%;
+    justify-self: end; /* Obsah sa zarovná k pravému okraju stĺpca */
+    display: flex;     /* Ak máš viaceré ikony vedľa seba */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.searching_bar {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* medzera medzi ikonou a inputom */
+    transition: all 0.3s ease;
+    margin-right: 50px;
+}
+
+/* Počiatočný stav inputu je skrytý */
+.search-input {
+    opacity: 0;
+    width: 0;
+    padding: 5px;
+    border: 1px solid black; /* Čierny okraj */
+    border-radius: 25px; /* viac okrúhle rohy */
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* Aktivovaný stav, kde sa input zobrazí a ikona sa posunie */
+.searching_bar.active .search-input {
+    opacity: 1;
+    width: 150px; /* nastavte požadovanú šírku */
+}
+
+/* Hladký posun ikony lupy */
+.icon-find {
+    transition: transform 0.3s ease;
+}
+.searching_bar.active .icon-find {
+    transform: translateX(-10px); /* posun ikonky doľava */
+}
